@@ -3,11 +3,11 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.haveRead = function(read){
-        if (read) {return "has been read";}
-        else {return "not read yet";}
-    };
     this.info = function() {
-        return(this.title + " by " + this.author + ", " + this.pages + " pages, " + haveRead);
+        return(this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read);
     }
 }
+
+const theHobbit("The Hobbit", "J.R.R. Tolkein", 295, "not read yet");
+
+console.log(theHobbit.info());
