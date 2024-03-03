@@ -12,16 +12,16 @@ function Book(title, author, pages, read) {
 function Library() {
     this.myLibrary = [];
 
-    function addBookToLibrary(newBook) {
-        myLibrary += newBook;
-    }
+    addBookToLibrary(newBook) {
+        myLibrary.push(newBook);
+    };
 
-    function displayBooks() {
+    displayBooks() {
         while (i < myLibrary.length) {
             console.log(myLibrary[i].info);
             i++;
-        }
-    }
+        };
+    };
 }
 
 const fantasyLibrary = new Library();
