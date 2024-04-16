@@ -17,6 +17,10 @@ function addBookToLibrary(newBook) {
     myLibrary.push(newBook);
 }
 
+const deleteBook = (title) => {
+
+};
+
 const displayBooks = (array) => {
     const bookHTML = array.map((Book) => {
         return `<li id="book-${Book.title} class="book-card">
