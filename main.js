@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -9,18 +11,14 @@ function Book(title, author, pages, read) {
     };
 }
 
-function Library() {
-    this.myLibrary = [];
+function addBookToLibrary(newBook) {
+    myLibrary.push(newBook);
+}
 
-    addBookToLibrary(newBook) {
-        myLibrary.push(newBook);
-    };
-
-    displayBooks() {
-        while (i < myLibrary.length) {
-            console.log(myLibrary[i].info);
-            i++;
-        };
+function displayBooks() {
+    while (i < myLibrary.length) {
+        console.log(myLibrary[i].info);
+        i++;
     };
 }
 
