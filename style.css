@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: clamp(200px, 25%,380px) 1fr;
+    grid-template-rows: 220px 1fr;
+}
+
+.sidebar {
+    grid-area: 1/1/3/2;
+    background: #1992d4;
+    height: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-areas:
+        "logo"
+        "top-nav"
+        "bottom-nav";
+    gap: 80px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 16px;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.top-nav {
+    grid-area: top-nav;
+}
+
+.bottom-nav {
+    grid-area: bottom-nav;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 20px 40px;
+    gap: 20px;
+}
+
+.icon-text img {
+    width: 30px;
+    height: auto;
+}
+
+.icon-text p {
+    font-size: 28px;
+}
+
+.topbar {
+    grid-area: 1/2/2/3;
+    background: white;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 32px;
+}
+
+.search input {
+    background-color: #e2e8f0;
+    width: 740px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 18px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.welcome img {
+    margin-left: 32px;
+    margin-right: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    background-color: #1992d4;
+    color: white;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #1992d4;
+    font-size: 20px;
+}
+
+.main {
+    grid-area: 2/2/3/3;
+    background: #e2e8f0;
+    display: grid;
+    grid-template: 1fr / 3fr 1fr;
+    padding: 40px 32px 2px 32px;
+    height: 1100px;
+}
+
+.projects {
+    grid-area: 1/1/2/2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+    height: 70vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: 10px 100%;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.color-border {
+    grid-area: 1/1/3/2;
+    background: orange;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-content {
+    padding: 40px 30px;
+}
+
+.card-content p {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+.right {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    margin-left: 40px;
+    gap: 40px;
+    height: 1000px;
+}
+
+.announcements {
+    grid-area: 1/1/2/2;
+}
+
+.side-card {
+    background-color: white;
+    border: solid 1px #e2e8f0;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.side-card p {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.an1, .an2 {
+    border-bottom: solid 1px #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.an2, .an3 {
+    padding-top: 20px;
+}
+
+.trending {
+    grid-area: 2/1/3/2;
+}
+
+.side-card-trending {
+    background-color: white;
+    border: solid 1px #e2e8f0;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+
+}
+
+.profile img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.profile p {
+    font-size: 20px;
+}
