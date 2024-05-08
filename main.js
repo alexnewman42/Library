@@ -10,5 +10,8 @@ const titleInput = document.getElementById("title-input");
 const authorInput = document.getElementById("author-input");
 const pagesInput = document.getElementById("pages-input");
 const readInput = document.getElementById("read-input");
-const descriptionInput = document.getElementById("description-input");
 
+const bookData = [];
+let currentBook = {};
+
+openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
