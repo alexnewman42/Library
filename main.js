@@ -15,3 +15,9 @@ const bookData = [];
 let currentBook = {};
 
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
+closeBookFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
+cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
+discardBtn.addEventListener("click", () => {
+    confirmCloseDialog.close();
+    bookForm.classList.toggle("hidden");
+});
