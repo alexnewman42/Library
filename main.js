@@ -21,3 +21,4 @@ discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
     bookForm.classList.toggle("hidden");
 });
+bookForm.addEventListener("submit", (e) => {e.preventDefault();});
