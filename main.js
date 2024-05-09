@@ -21,4 +21,12 @@ discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
     bookForm.classList.toggle("hidden");
 });
-bookForm.addEventListener("submit", (e) => {e.preventDefault();});
+bookForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const dataArrIndex = bookData.findIndex((item) => item.id === currentBook.id);
+    const bookObj = {
+        id: titleInput.value,
+        
+    };
+    console.log(bookObj);
+});
