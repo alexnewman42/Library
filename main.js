@@ -25,8 +25,14 @@ bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const dataArrIndex = bookData.findIndex((item) => item.id === currentBook.id);
     const bookObj = {
-        id: titleInput.value,
-        
+        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+        title: titleInput.value,
+        author: authorInput.value,
+        pages: pagesInput.value,
+        read: readInput.value,
     };
-    console.log(bookObj);
+    if (dataArrIndex === -1) {
+        bookData.unshift(bookObj);
+    }
+    bookData.forEach(({id, title,author, pages, read}) => {});
 });
