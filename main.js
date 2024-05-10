@@ -34,11 +34,13 @@ bookForm.addEventListener("submit", (e) => {
     if (dataArrIndex === -1) {
         bookData.unshift(bookObj);
     }
-    bookData.forEach(({id, title,author, pages, read}) => {
+    bookData.forEach(({id, title, author, pages, read}) => {
         (booksContainer.innerHTML += `
             <div class="book" id="${id}"></div>
             <p><strong>Title: </strong>${title}</p>
-            
+            <p><strong>Author: </strong>${author}</p>
+            <p><strong>Pages: </strong>${pages}</p>
+            <p><strong>Read: </strong>${read}</p>
         `)
         }
     );
