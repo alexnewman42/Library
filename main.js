@@ -14,7 +14,14 @@ const readInput = document.getElementById("read-input");
 const bookData = [];
 let currentBook = {};
 
-const reset = () => {};
+const reset = () => {
+    titleInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
+    readInput.value = false;
+    bookForm.classList.toggle("hidden");
+    currentBook = {};
+};
 
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
 closeBookFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
