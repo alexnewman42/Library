@@ -14,6 +14,8 @@ const readInput = document.getElementById("read-input");
 const bookData = [];
 let currentBook = {};
 
+const reset = () => {};
+
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
 closeBookFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
