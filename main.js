@@ -24,11 +24,18 @@ const reset = () => {
 };
 
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
-closeBookFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
+closeBookFormBtn.addEventListener("click", () => {
+    const formInputsContainValues = titleInput.value || authorInput.value || pagesInput.value || readInput.value;
+    if (formInputsContainValues) {
+        confirmCloseDialog.showModal();
+    } else {
+        reset();
+    }
+});
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
-    bookForm.classList.toggle("hidden");
+    reset();
 });
 bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -55,5 +62,5 @@ bookForm.addEventListener("submit", (e) => {
         `)
         }
     );
-    bookForm.classList.toggle("hidden");
+    reset();
 });
