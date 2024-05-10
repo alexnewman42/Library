@@ -41,7 +41,10 @@ bookForm.addEventListener("submit", (e) => {
             <p><strong>Author: </strong>${author}</p>
             <p><strong>Pages: </strong>${pages}</p>
             <p><strong>Read: </strong>${read}</p>
+            <button type="button" class="btn">Edit</button>
+            <button type="button" class="btn">Delete</button>
         `)
         }
     );
+    bookForm.classList.toggle("hidden");
 });
