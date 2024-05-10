@@ -26,6 +26,8 @@ const addOrUpdateBook = () => {
     if (dataArrIndex === -1) {
         bookData.unshift(bookObj);
     }
+    updateBookContainer();
+    reset();
 };
 
 const updateBookContainer = () => {
