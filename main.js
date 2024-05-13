@@ -52,6 +52,18 @@ const deleteBook = (buttonEl) => {
     taskData.splice(dataArrIndex, 1);
 };
 
+const editBook = (buttonEl) => {
+    const dataArrIndex = bookData.findIndex((item) => item.id === buttonEl.parentElement.id);
+    currentBook = bookData[dataArrIndex];
+    titleInput.value = currentBook.title;
+    authorInput.value = currentBook.author;
+    pagesInput.value = currentBook.pages;
+    readInput.value = currentBook.read;
+
+    addOrUpdateBookBtn.innerText = "Update Book";
+    bookForm.classList.toggle("hidden");
+};
+
 const reset = () => {
     titleInput.value = "";
     authorInput.value = "";
