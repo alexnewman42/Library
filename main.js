@@ -31,6 +31,7 @@ const addOrUpdateBook = () => {
 };
 
 const updateBookContainer = () => {
+    booksContainer.innerHTML = "";
     bookData.forEach(({id, title, author, pages, read}) => {
         (booksContainer.innerHTML += `
             <div class="book" id="${id}"></div>
@@ -38,12 +39,14 @@ const updateBookContainer = () => {
             <p><strong>Author: </strong>${author}</p>
             <p><strong>Pages: </strong>${pages}</p>
             <p><strong>Read: </strong>${read}</p>
-            <button type="button" class="btn">Edit</button>
-            <button type="button" class="btn">Delete</button>
+            <button type="button" class="btn" onclick="editBook(this)">Edit</button>
+            <button type="button" class="btn" onclick="deleteBook(this)">Delete</button>
         `)
         }
     );
 };
+
+const deleteBook = (buttonEl) => {};
 
 const reset = () => {
     titleInput.value = "";
@@ -71,7 +74,5 @@ discardBtn.addEventListener("click", () => {
 });
 bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
-
-    reset();
+    addOrUpdateBook();
 });
