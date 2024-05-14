@@ -29,22 +29,25 @@ const addOrUpdateBook = () => {
     } else {
         bookData[dataArrIndex] = bookObj;
     }
-    updateBookContainer();
-    reset();
+    updateBookContainer()
+    reset()
 };
 
 const updateBookContainer = () => {
     booksContainer.innerHTML = "";
-    bookData.forEach(({id, title, author, pages, read}) => {
-        (booksContainer.innerHTML += `
-            <div class="book" id="${id}"></div>
-            <p><strong>Title: </strong>${title}</p>
-            <p><strong>Author: </strong>${author}</p>
-            <p><strong>Pages: </strong>${pages}</p>
-            <p><strong>Read: </strong>${read}</p>
-            <button type="button" class="btn" onclick="editBook(this)">Edit</button>
-            <button type="button" class="btn" onclick="deleteBook(this)">Delete</button>
-        `)
+
+    bookData.forEach(
+        ({id, title, author, pages, read}) => {
+            (booksContainer.innerHTML += `
+                <div class="book" id="${id}">
+                    <p><strong>Title: </strong>${title}</p>
+                    <p><strong>Author: </strong>${author}</p>
+                    <p><strong>Pages: </strong>${pages}</p>
+                    <p><strong>Read: </strong>${read}</p>
+                    <button type="button" class="btn" onclick="editBook(this)">Edit</button>
+                    <button type="button" class="btn" onclick="deleteBook(this)">Delete</button>
+                </div>
+            `)
         }
     );
 };
@@ -88,12 +91,15 @@ closeBookFormBtn.addEventListener("click", () => {
         reset();
     }
 });
+
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close(
 ));
+
 discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
     reset();
 });
+
 bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     addOrUpdateBook();
