@@ -25,6 +25,8 @@ const addOrUpdateBook = () => {
     };
     if (dataArrIndex === -1) {
         bookData.unshift(bookObj);
+    } else {
+        bookData[dataArrIndex] = bookObj;
     }
     updateBookContainer();
     reset();
@@ -74,9 +76,11 @@ const reset = () => {
 };
 
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
+
 closeBookFormBtn.addEventListener("click", () => {
     const formInputsContainValues = titleInput.value || authorInput.value || pagesInput.value || readInput.value;
-    if (formInputsContainValues) {
+    const bookInputValuesUpdated = titleInput.value !== currentBook.title || authorInput.value !== currentBook.author || pagesInput.value !== currentBook.pages || readInput.value !== currentBook.read;
+    if (formInputsContainValues && bookInputValuesUpdated) {
         confirmCloseDialog.showModal();
     } else {
         reset();
