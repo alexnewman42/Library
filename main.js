@@ -57,6 +57,7 @@ const deleteBook = (buttonEl) => {
     const dataArrIndex = bookData.findIndex((item) => item.id === buttonEl.parentElement.id);
     buttonEl.parentElement.remove();
     taskData.splice(dataArrIndex, 1);
+    localStorage.setItem("data", JSON.stringify(bookData));
 };
 
 const editBook = (buttonEl) => {
