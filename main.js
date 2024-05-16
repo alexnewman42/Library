@@ -29,6 +29,7 @@ const addOrUpdateBook = () => {
     } else {
         bookData[dataArrIndex] = bookObj;
     }
+    localStorage.setItem("data", JSON.stringify(bookData));
     updateBookContainer()
     reset()
 };
