@@ -73,6 +73,7 @@ const editBook = (buttonEl) => {
 };
 
 const reset = () => {
+    addOrUpdateBookBtn.innerText = "Add Task";
     titleInput.value = "";
     authorInput.value = "";
     pagesInput.value = "";
