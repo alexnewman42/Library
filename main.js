@@ -11,7 +11,7 @@ const authorInput = document.getElementById("author-input");
 const pagesInput = document.getElementById("pages-input");
 const readInput = document.getElementById("read-input");
 
-const bookData = [];
+const bookData = JSON.parse(localStorage.getItem("data")) || [];
 let currentBook = {};
 
 const addOrUpdateBook = () => {
@@ -80,6 +80,10 @@ const reset = () => {
     bookForm.classList.toggle("hidden");
     currentBook = {};
 };
+
+if(bookData.length) {
+    updateBookContainer();
+}
 
 openBookFormBtn.addEventListener("click", () => bookForm.classList.toggle("hidden"));
 
